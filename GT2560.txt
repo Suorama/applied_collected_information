@@ -18,7 +18,7 @@ Make sure that your drivers extra pins not hit anything (diag and vref). If so, 
 With Klipper you can use all UART features.
 Your uart_pin is PH0 (if you chose same than I) for all drivers. Uart_address is that address what you put with MS1 and MS2 jumpers. 
 
-tmc2209 stepper_x]
+[tmc2209 stepper_x]
 uart_pin: PH0
 uart_address: 0
 interpolate: True

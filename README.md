@@ -9,10 +9,13 @@ KLIPPER
    - Make updates (apt update, apt upgrade)
    
 - Install KIAUH to Orange Pi
-   - Install GIT                        [sudo apt-get install git -y]
-   - Copy KIAUH to user home (not root) [cd ~]
-                                        [git clone https://github.com/th33xitus/kiauh.git]
-   - Start KIAUH                        [./kiauh/kiauh.sh}
+   - Install GIT
+     - [sudo apt-get install git -y]
+   - Copy KIAUH to user home (not at root)
+     - [cd ~]
+     - [git clone https://github.com/th33xitus/kiauh.git]
+   - Start KIAUH
+     - [./kiauh/kiauh.sh}
    - Use KIAUH to install Klipper, Moonraker (, FLUIDD and KlipperScreen)
    
 - Configure Klipper to your printer.

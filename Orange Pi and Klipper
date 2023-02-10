@@ -1,1 +1,25 @@
-test
+Orange Pi
+
+- Install Armbian to Orange Pi
+   - Goto to the Orange Pi site and locate your OPi model and choose Armbian (bullseye). It could be minimal.
+   - "Burn" disk image to the OPi or sd card. (Balena Etcher)
+   - Start OPi with new armbian OS.
+   - Find your OPi from network or use display etc. and start configuring.
+   - Add user, example "pi" (installation ask to do that). I chose a klipper, works.
+   - Make updates (apt update, apt upgrade)
+
+KLIPPER
+
+- Install KIAUH to Orange Pi
+   - First install GIT
+     - [sudo apt-get install git -y]
+   - Copy KIAUH to the crated user home directory (not as root account, but must be sudoer)
+     - [cd ~]
+     - [git clone https://github.com/th33xitus/kiauh.git]
+   - Start KIAUH
+     - [./kiauh/kiauh.sh}
+   - Use KIAUH to install Klipper, Moonraker (, FLUIDD and KlipperScreen)
+   
+- Configure Klipper to your printer.
+   - Depens your printer, use Klipper documentation.
+   

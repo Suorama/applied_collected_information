@@ -1,0 +1,55 @@
+GT2560A board have 5 stepper driver place. That is enough to many purposes.
+
+I found how I can use nicely example TMC2209 drivers with UART feature.
+ - Because I do not use Display or SD card connectors, there is lots of pins to use.
+ - Example pim 8, at LCD connector is nicely to RXD2 (PH0) at MCU.
+Well, because I do not need anymore than 4 drivers X, Y, Z1 and Z2 to silent, I do not need more UART channels.
+TMC2209 can addressed via MS1 and MS2 pins to address 0, 1, 2 and 3.
+ 00 = 0
+ 01 = 1
+ 10 = 2
+ 11 = 3
+Do not use MS3 jumper, that pin is your UART RX pin.
+
+So, give addresses to the drivers with MS1 and MS2 pins.
+Make wire what you can connect one end to LCD connector pin 8 and other ends to the drivers RX pins. So you need a branched cord.
+Make sure that your drivers extra pins not hit anything (diag and vref). If so, you can cut downside ins off or do something else if you not want cut.
+
+With Klipper you can use all UART features.
+Your uart_pin is PH0 (if you chose same than I) for all drivers. Uart_address is that address what you put with MS1 and MS2 jumpers. 
+
+tmc2209 stepper_x]
+uart_pin: PH0
+uart_address: 0
+interpolate: True
+run_current: 0.800
+hold_current: 0.500
+sense_resistor: 0.110
+stealthchop_threshold: 999999
+
+[tmc2209 stepper_y]
+uart_pin: PH0
+uart_address: 1
+interpolate: True
+run_current: 0.800
+hold_current: 0.500
+sense_resistor: 0.110
+stealthchop_threshold: 999999
+
+Interpolation gives 256 microsteps and stealthchop_treshold: 999999 give more quietness. Well same time those gine a bit less accuracy to positioining.
+But now you can adjust run and hold current. Of cource, if hold current is different, could positioning chance...
+
+But if oll those anti accuracy features affect about 0.001mm, then there could be something like 0.003mm error.
+
+With BL-Touch, I use one endstop with 5V, GND and signal and other endstop with GND and signal.
+Then I look at the schematic what pins those are and use these with klipper.
+
+Later I plan add also filment runout sensor, and I plan to use LCD connector 5V pin 1, GND pin 2 and example pin 3 (PH3) with it.
+That because there is not more than 6 that kind of inputs normally. And those are used:
+ 1. X endstop
+ 2. Y endstop
+ 3. Z1 endstop
+ 4. Z2 endstop
+ 5. BL-Touch 
+ 6. BL-Touch
+ 

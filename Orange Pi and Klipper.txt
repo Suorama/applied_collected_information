@@ -29,3 +29,7 @@ Just with Klipper and printer there is 22% memory usage and after ADXL345 29%.
 System load are about 0.65 - 0.02 level. Sometimes a bit over 1.
 I put small heatsink to top oft the processor and system fam blows over that heatsink.
 Then temps keeps below 50C. If there is not any cooling, temperature could rise over 60C level.
+
+When I got ordered 3.5" displays, I try add one to the OPi. I'm not sure if 512mb is too few, but I ordered also 1mb version of OPi Zero 2.
+I have also OPi lite with H3 512mb and Zero plus 2 with H5 512mb and 8G eMMC. Because those has HDMI connector, I know 512mb could be enough to run some graphics.
+Well, later I know better.

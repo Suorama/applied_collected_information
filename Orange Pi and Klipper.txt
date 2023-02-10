@@ -23,3 +23,9 @@ KLIPPER
 - Configure Klipper to your printer.
    - Depens your printer, use Klipper documentation.
    
+I test that with Orange Pi Zero (Allwinner H2+ and 512mb).
+All seems to work like a RPi 3b. Only amount of memory is half.
+Just with Klipper and printer there is 22% memory usage and after ADXL345 29%.
+System load are about 0.65 - 0.02 level. Sometimes a bit over 1.
+I put small heatsink to top oft the processor and system fam blows over that heatsink.
+Then temps keeps below 50C. If there is not any cooling, temperature could rise over 60C level.

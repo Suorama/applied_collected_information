@@ -1,15 +1,18 @@
-GT2560A board have 5 stepper driver place. That is enough to many purposes.
+GT2560A board have 5 stepper driver places. That is enough to many purposes.
 
-I found how I can use nicely example TMC2209 drivers with UART feature.
- - Because I do not use Display or SD card connectors, there is lots of pins to use.
- - Example pim 8, at LCD connector is nicely to RXD2 (PH0) at MCU.
-Well, because I do not need anymore than 4 drivers X, Y, Z1 and Z2 to silent, I do not need more UART channels.
+I find how I can use, example TMC2209 drivers with UART mode.
+ - Because I do not use Display or SD card connectors, there is lots of pins to use. No, need solder.
+ - Example pin 8, at LCD connector is connected to RXD2 (PH0) at MCU, originally.
+Well, because I do not need more than 4 drivers X, Y, Z1 and Z2 to make printer silent, I do not need use more UART channels.
 TMC2209 can addressed via MS1 and MS2 pins to address 0, 1, 2 and 3.
  00 = 0
  01 = 1
  10 = 2
  11 = 3
 Do not use MS3 jumper, that pin is your UART RX pin.
+
+I use DRV8825 driver with 32 steps with extruder and that is virtually noiseless. 
+Or LV8729, If I foud those somewhere..., but DRV8825 I have.
 
 So, give addresses to the drivers with MS1 and MS2 pins.
 Make wire what you can connect one end to LCD connector pin 8 and other ends to the drivers RX pins. So you need a branched cord.
@@ -52,4 +55,3 @@ That because there is not more than 6 that kind of inputs normally. And those ar
  4. Z2 endstop
  5. BL-Touch 
  6. BL-Touch
- 

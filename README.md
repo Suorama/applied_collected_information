@@ -3,23 +3,6 @@ Mainly notes about 3D printing hardware
 
 1. How use Orange Pi with Klipper and ADXL345
 
-KLIPPER
-- Install Armbian to Orange Pi
-   - Add user (installation ask to do that)
-   - Make updates (apt update, apt upgrade)
-   
-- Install KIAUH to Orange Pi
-   - Install GIT
-     - [sudo apt-get install git -y]
-   - Copy KIAUH to user home (not at root)
-     - [cd ~]
-     - [git clone https://github.com/th33xitus/kiauh.git]
-   - Start KIAUH
-     - [./kiauh/kiauh.sh}
-   - Use KIAUH to install Klipper, Moonraker (, FLUIDD and KlipperScreen)
-   
-- Configure Klipper to your printer.
-   - Depens your printer, use Klipper documentation.
 
 ADXL345
 - You must get SPI to work

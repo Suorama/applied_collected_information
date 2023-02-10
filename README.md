@@ -9,3 +9,5 @@ Remember, you can use multiple MB:s...
 1. How to use cheap Orange Pi (Zero) with Klipper and ADXL345
 
 2. GEEETech GT2560A with TMC2209 UART, BL-TOUCH, 2 x separate drived Z-azis and endstops.
+
+Future I think maybe I add more different MB info and test more cheap RPi substitutes with 3D printing.

@@ -1,6 +1,9 @@
 # applied_collected_information
 Mainly notes to me about 3D printing hardware
 
+I do not plan to make this place to all inclusive site how to use MCU:s.
+I just collect things and mark those up to remember. Also I try mark up what I do with my founds...
+
 Klipper helps me to use almost any 3D printing motherboard to almost anything.
 Not may need to buy faster or fancier MB´s,
 exept if your arsenal does not include enough driver spaces or other I/O points. Or you just want...

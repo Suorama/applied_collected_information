@@ -35,6 +35,6 @@ I have also OPi lite with H3 512mb and Zero plus 2 with H5 512mb and 8G eMMC. Be
 Well, later I know better.
 
 I test install Klipper to Orange Pi Zero Plus2 H5 512mb.
-Armbian is not officially supperted and take unsupperted verion of lunar distribution. It seems to work. Pi temperature Doesn't work but else.
+Armbian is not officially supported and take unsupperted verion of lunar distribution. It seems to work. Pi temperature Doesn't work with that distro, but else.
 To use USB ports with that SBC you need USB hat.
 Looks like it is the sam what distro of linux you use, just know how install stuff.

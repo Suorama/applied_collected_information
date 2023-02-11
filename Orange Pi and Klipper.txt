@@ -33,3 +33,8 @@ Then temps keeps below 50C. If there is not any cooling, temperature could rise 
 When I got ordered 3.5" displays, I try add one to the OPi. I'm not sure if 512mb is too few, but I ordered also 1mb version of OPi Zero 2.
 I have also OPi lite with H3 512mb and Zero plus 2 with H5 512mb and 8G eMMC. Because those has HDMI connector, I know 512mb could be enough to run some graphics.
 Well, later I know better.
+
+I test install Klipper to Orange Pi Zero Plus2 H5 512mb.
+Armbian is not officially supperted and take unsupperted verion of lunar distribution. It seems to work. Pi temperature Doesn't work but else.
+To use USB ports with that SBC you need USB hat.
+Looks like it is the sam what distro of linux you use, just know how install stuff.

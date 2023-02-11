@@ -38,3 +38,15 @@ I test install Klipper to Orange Pi Zero Plus2 H5 512mb.
 Armbian is not officially supported and take unsupperted verion of lunar distribution. It seems to work. Pi temperature Doesn't work with that distro, but else.
 To use USB ports with that SBC you need USB hat.
 Looks like it is the sam what distro of linux you use, just know how install stuff.
+
+Orange Pi Lite.
+Remember check your power. I use 5V/3A marked power, but reality was 4.2V and that cause weird problems. SD cards seemsto behaving wierdly.
+
+64Gb card works fine.
+
+Little fan blow keeps temp between 30°C - 35°C while installing. CPU load keeps 20 - 25% level. But once there was 64% and then Temp rise to 36.2°C.
+Long row 25- 26% keeps temps at 29 - 34°C level
+
+AllWinner H3 CPU can run between 480 - 1368MHz.
+
+Lite looks look pretty nice SBC to 3D printing. At the moment. I can found also 1Gb version.

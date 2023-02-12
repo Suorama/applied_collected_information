@@ -23,23 +23,28 @@ KLIPPER
 - Configure Klipper to your printer.
    - Depens your printer, use Klipper documentation.
    
-I test that with Orange Pi Zero (Allwinner H2+ and 512mb).
+I test that with Orange Pi Zero (Allwinner H2+ and 512Mb).
 All seems to work like a RPi 3b. Only amount of memory is half.
 Just with Klipper and printer there is 22% memory usage and after ADXL345 29%.
 System load are about 0.65 - 0.02 level. Sometimes a bit over 1.
 I put small heatsink to top oft the processor and system fam blows over that heatsink.
-Then temps keeps below 50C. If there is not any cooling, temperature could rise over 60C level.
+Then temps keeps below 50°C. If there is not any cooling, temperature could rise over 60°C level.
 
-When I got ordered 3.5" displays, I try add one to the OPi. I'm not sure if 512mb is too few, but I ordered also 1mb version of OPi Zero 2.
-I have also OPi lite with H3 512mb and Zero plus 2 with H5 512mb and 8G eMMC. Because those has HDMI connector, I know 512mb could be enough to run some graphics.
+When I got ordered 3.5" displays, I try add one to the OPi. I'm not sure if 512Mb is too few, but I ordered also 1mb version of OPi Zero 2.
+I have also OPi Lite with H3 512Mb and Zero plus 2 with H5 512Mb and 8G eMMC. Because those has HDMI connector, I know 512Mb could be enough to run some graphics.
 Well, later I know better.
+
+Orange Pi Zero +2 (H5 512Mb)
 
 I test install Klipper to Orange Pi Zero Plus2 H5 512mb.
 Armbian is not officially supported and take unsupperted verion of lunar distribution. It seems to work. Pi temperature Doesn't work with that distro, but else.
 To use USB ports with that SBC you need USB hat.
 Looks like it is the sam what distro of linux you use, just know how install stuff.
 
-Orange Pi Lite.
+Later I hunt older Bullseye image, and I got temps also to show. Well I do not know if those are right, but if they are, that H5 runs pretty cool. I install it top of my electronic case what is with 120mm fan, and when normal printing happened, temp keep below 30°C. That air flow from case grille is enough.
+
+Orange Pi Lite (H3 512Mb)
+
 Remember check your power. I use 5V/3A marked power, but reality was 4.2V and that cause weird problems. SD cards seemsto behaving wierdly.
 
 64Gb card works fine.
@@ -47,6 +52,10 @@ Remember check your power. I use 5V/3A marked power, but reality was 4.2V and th
 Little fan blow keeps temp between 30°C - 35°C while installing. CPU load keeps 20 - 25% level. But once there was 64% and then Temp rise to 36.2°C.
 Long row 25- 26% keeps temps at 29 - 34°C level
 
-AllWinner H3 CPU can run between 480 - 1368MHz.
+OPi Lite AllWinner H3 CPU can run between 480 - 1368MHz. Or it setted those values.
 
 Lite looks look pretty nice SBC to 3D printing. At the moment. I can found also 1Gb version.
+
+Well, looks, like AllWinner CPU's work nicely with Klipper and 3D printing. Even 512Mb memory seems to be enough. Maybe display make differense.
+
+LED-bar control works also really easily with GT2560 board second extruder heater port.

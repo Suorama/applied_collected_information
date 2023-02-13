@@ -1,0 +1,69 @@
+Somethings what I'v tested and thinked to work.
+
+First. If PSU tell's there is 180W to share, that should be true.
+Of cource some manufacturers promise too much or there is temp problems is max power is used any longer than few seconds.
+I got few days ago a pile of 3D printer stuff. "Seller" told me that he's old printer has a under power PSU and that why everything goes wrong.
+I got the pile of stuff and look that PSU. It is 250W power. (My own GEEETech use 180W PSU).
+Well, if there is normal heatbed like those Anet A6 etc. printers have, it takes about 120W when it heat.
+Normally Nozzle heater is 40 - 50 W, and more often it is 40W.
+Like my GEEETech little 180W PSU does not think anythting when I put that 160W load to the V+ and V- posts.
+If I adjust PSU voltage to 12,3V, it keeps that 12,3V without any difficulties when I connect that 160W load.
+Same if I use 12,5V.
+So, why voltage drop dramatically and bed heat slower etc. Wiring.
+If you want to be sure that Volts not drop to MB and MCU, you must at least wiring own wires to MB, Heatbed and Nozzle heater from PSU.
+Of cource you must use some kind of "relay". SSD, MosFET or relay.
+SSD is way too much expensive for that. Ralays are too noisy and not work well with PWM.
+Well, there is MosFET already at the motherboard...
+Thats true. But that is the oroginal reason...
+Because Power comes first to MB via wires. When there is not load, PSU side and MB side of the wires show same voltage.
+If I start bed heating, then that 120W with 12V mean 10A current.
+When power "moves" in leads, there is some kind of resistance. More power, "more resistance" or resistance feels more.
+That mean, some of power loss to the wires. So, beacuse current keeps "the same", voltage drops.
+That mean also, stepper motors have less space to work, fans runs slower, etc. Then we put Nozzle heater also on...
+
+I found 10 PCS LR7843 MosFET modules at price of 3.50€.
+So, I decide to test what those are.
+
+I also found site, where is more info of that and many others, what I found.
+https://protosupplies.com/product/lr7843-mosfet-control-module/
+
+[quote]
+One switching output
+Ultra low 3.3mΩ Rds(on) resistance
+2.5V – 20V input control voltage with optoisolation
+6 – 28V output switching voltage
+15A continuous current handling capability (See notes below)
+If driven with PWM, the maximum peak current can be greater up to 30A or more.
+3.3 and 5V logic compatible (See notes below)
+[/quote]
+
+So, I can use that module with 12V or 24V printers. When use 24V printers, is better use MCU pin instead 24V controll pins from MB's motherboard with voltage dropper.
+
+So, example that 10A bed shoud work easily. And 3.3A Nozzle cardridge more easily.
+
+And I think, I can use couple parallel... perhaps...
+
+There is also example AOD4184 what looks at first very promising. 40V and 50A. But truth is different. That FET can handle 10A continously.
+
+So, it cost about 0.70€ to solve that problem. Well, I need some wires too.
+
+Now, I can put own wires to MB, HB and E0 from PSU.
+MB goes mormally, but I must add some fat wires to the MosFET's. 
+Theoretically 1.5mm2 should handle 10A. Well, that is true. That wire does not burn with 10A current. So, it would be better if use thicker wires.
+These wires from PSU, goes FET module [Power supply and Load power] hole.
+It is nicier if I are already disconnect heater wires from MB and I can add both wires same time to the connector.
+Negative wire from PSU goes to [Power supply ground] post. And negative from heater, goes to [Load ground] post.
+If that was 12V system, old MB heater post must connect to MosFet module [PWM] and [GND] posts at the other end os the module.
+
+What happens?
+ - PSU give 12.5V to the its posts.
+ - MB got after it's own wiring example 12.4V
+ - Heatbed and Extruder nozzle heater got nothing, but MosFET's are ready.
+ - I put bed heater on.
+ - BedHeater MosFET give power to the bed.
+ - PSU voltage is still 12.5V and MB got 12.4V after its own wiring.
+ - Hotbed get 12,1V because wire losses are bigger.
+ - I put Nozzle heater on.
+ - NozzleHeater MosFET allow power flow to the cardridge.
+ - PSU voltage is stil 12.5V, MB got 12.4V, Hotbed got 12.1V and Nozzle cardridge got 12.2V
+ - Because of losses, I adjust voltage to 12.5V. So every component got at least 12V. And 0.5V is not that much over.

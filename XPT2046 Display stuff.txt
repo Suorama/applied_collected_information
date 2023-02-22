@@ -1,6 +1,17 @@
 
 
 sudo rm -rf LCD-show
-git clone https://github.com/goodtft/LCD-show.git
+git clone https://github.com/goodtft/LCD-show.git //to install drivers
 chmod -R 755 LCD-show
 cd LCD-show/
+
+
+sudo ./LCD35-show //to show lcd
+
+sudo ./LCD-hdmi //to show HDMI
+
+cd LCD-show/
+sudo dpkg -i -B xinput-calibrator_0.7.5-1_armhf.deb //to calbrate touch
+DISPLAY=:0.0 xinput_calibrator
+
+sudo nano /etc/X11/xorg.conf.d/99-calibration.conf  //There is swap axes parameter.

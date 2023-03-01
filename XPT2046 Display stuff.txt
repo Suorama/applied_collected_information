@@ -8,6 +8,8 @@ cd LCD-show/
 
 sudo ./LCD35-show //to show lcd
 
+(Auto Reboot)
+
 sudo ./LCD-hdmi //to show HDMI
 
 cd LCD-show/

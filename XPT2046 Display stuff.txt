@@ -10,10 +10,12 @@ sudo ./LCD35-show //to show lcd
 
 (Auto Reboot)
 
-sudo ./LCD-hdmi //to show HDMI
+(sudo ./LCD-hdmi //to show HDMI)
 
 cd LCD-show/
 sudo dpkg -i -B xinput-calibrator_0.7.5-1_armhf.deb //to calbrate touch
 DISPLAY=:0.0 xinput_calibrator
 
 sudo nano /etc/X11/xorg.conf.d/99-calibration.conf  //There is swap axes parameter.
+
+These seems work with Raspberry. Orange seems to be more work. Later more, I hope ;)

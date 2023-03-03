@@ -18,4 +18,4 @@ DISPLAY=:0.0 xinput_calibrator
 
 sudo nano /etc/X11/xorg.conf.d/99-calibration.conf  //There is swap axes parameter.
 
-These seems work with Raspberry. Orange seems to be more work. Later more, I hope ;)
+These seems work with Raspberry. Orange seems to need more work. Later more, I hope ;)

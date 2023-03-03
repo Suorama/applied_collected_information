@@ -20,3 +20,4 @@ sudo nano /etc/X11/xorg.conf.d/99-calibration.conf  //There is swap axes paramet
 
 These seems work with Raspberry. Orange seems to need more work. Later more, I hope ;)
 RasPi 3B make klipper installation poorly long time... Mäybe Orange minimal armbian include more components with that that Raspbian Desktop.
+But all seems to work nicely.

@@ -1,4 +1,5 @@
-
+__________________________________________________________________________
+Raspberry Pi
 
 sudo rm -rf LCD-show
 git clone https://github.com/goodtft/LCD-show.git //to install drivers
@@ -18,11 +19,13 @@ DISPLAY=:0.0 xinput_calibrator
 
 sudo nano /etc/X11/xorg.conf.d/99-calibration.conf  //There is swap axes parameter.
 
-These seems work with Raspberry. Orange seems to need more work. Later more, I hope ;)
-RasPi 3B make klipper installation poorly long time... Mäybe Orange minimal armbian include more components with that that Raspbian Desktop.
+These seems work with Raspberry.
+RasPi 3B make klipper installation poorly long time...
+Mäybe Orange minimal armbian include more components with that that Raspbian Desktop.
 But all seems to work nicely.
+____________________________________________________________________________
 
-ORange Pi and others...
+ORange Pi (and others...)
 
 1st
 You need older linux. I found Armbian 20.05.4 Focal image. That is latest what I foud what works. (I add that image to OPi Lite, OPi Zero etc to my collected info, I alaso put link to archive where I found those, but links...)

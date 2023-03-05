@@ -21,3 +21,51 @@ sudo nano /etc/X11/xorg.conf.d/99-calibration.conf  //There is swap axes paramet
 These seems work with Raspberry. Orange seems to need more work. Later more, I hope ;)
 RasPi 3B make klipper installation poorly long time... Mäybe Orange minimal armbian include more components with that that Raspbian Desktop.
 But all seems to work nicely.
+
+ORange Pi and others...
+
+1st
+You need older linux. I found Armbian 20.05.4 Focal image. That is latest what I foud what works. (I add that image to OPi Lite, OPi Zero etc to my collected info, I alaso put link to archive where I found those, but links...)
+
+2nd
+"Burn" linux to the SD card.
+
+3rd
+Start Armbian, use armbian-config to freeze distro to that.
+
+Next use guide what you can found many places:
+sudo nano /boot/armbianEnv.txt //Add the following lines to the end of the file
+
+overlays=spi-spidev spi-add-cs1
+param_spidev_spi_bus=0
+param_spidev_spi_cs=1
+
+save and quit
+
+sudo nano /etc/modules-load.d/98-fbtft.conf // insert the following line
+fbtft
+fbtft_device
+
+save and quit
+
+sudo nano /etc/modprobe.d/fbtft.conf // Add the following
+options fbtft_device rotate=90 name=piscreen speed=16000000 gpios=reset:2,dc:71 txbuflen=32768 fps=25
+
+save and quit
+
+sudo apt-get install xserver-xorg-video-fbdev
+sudo nano /usr/share/X11/xorg.conf.d/99-fbdev.conf // Insert this in the file:
+
+Section "Device"
+Identifier "piscreen"
+Driver "fbdev"
+Option "fbdev" "/dev/fb0"
+EndSection
+
+save and quit
+
+sudo armbian-add-overlay foo.dts //you found that on the root
+
+sudo reboot
+
+Touch later

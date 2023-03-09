@@ -96,6 +96,12 @@ Save new configuration.
 
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j$(nproc)
 
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules_install
+
+cp arch/arm/boot/Image /boot/Image-5.15.93-sunxi
+
+sudo update-initramfs -c -k 5.15.93-sunxi
+
 
 
 Continue...

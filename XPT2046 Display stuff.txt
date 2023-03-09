@@ -77,3 +77,31 @@ To install Klipper via Kiauh, I need to remove all security repositorys from apt
 Because I freeze build, I can use apt update & upgrade. But release stay at Focal and 5.4 version, what is what I want because newer release doesn't support fbtft what is needed to LCD.
 
 Well, unfortunately Klipper Screen not work yet, so battle continue.
+
+Take latest stable armbian. //23.02.2 aka 5.15.93 jammy. Orange Pi lite
+Make update && upgrade //apt
+sudo apt-get install libncurses-dev
+wget linux-source-current-sunxi_XX.XX.X_all.deb //where ever you found these... I add one here.
+sudo dpkg -i linux-source-current-sunxi_23.02.2_all.deb //at this time or added file
+(sudo su)
+cd /usr/src/
+
+tar -xf linux-source-current-sunxi_5.15.93 // tai jotain
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+  -> Device Drivers -> Staging drivers -> Support for small TFT LCD display modules
+  change M to *
+Save new configuration.
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j$(nproc)
+
+
+
+Continue...
+
+
+
+
+Notepad
+

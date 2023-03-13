@@ -105,12 +105,12 @@ sudo update-initramfs -c -k 5.15.93-sunxi
 
 Latest things
 
-I install latest armbian, unlock updates and uprages from armbian-config.
-Change kernel vession to 5.4 with others option.
+I install latest armbian, unlock kernel updates and uprages from armbian-config.
+Change kernel version to 5.4 with others option.
 Reboot
 Do all changes to get fbtft to work.
 
-Next install kKIAUH and stuffs with it.
+Next install KIAUH and stuffs with it.
 
 Continue...
 

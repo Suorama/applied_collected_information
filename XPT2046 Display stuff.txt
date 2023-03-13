@@ -93,7 +93,7 @@ sudo nano /home/(username)/.xsessionrc // (username) = userneme what is user who
 
 DISPLAY=:0.0 xinput --set-prop 'ADS7846 Touchscreen' 'Coordinate Transformation Matrix' -1 0 1 0 1 0 0 0 1 // that works for me. 0 -1 1 1 0 0 0 0 1 was originally.
 
-You can run code alone to find right confgi to you.
+You can run code alone to find right config to you.
 
 You can install xinput-calibrator with apt-get install xinput-calibrator and run:
 

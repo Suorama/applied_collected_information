@@ -91,7 +91,7 @@ export XAUTHORITY=$(eval echo ~who | grep tty7 | sed 's/\([a-z]*\).*/\1/')/.Xaut
 
 sudo nano /home/(username)/.xsessionrc // (username) = userneme what is user who run klipper. Add next line.
 
-DISPLAY=:0.0 xinput --set-prop 'ADS7846 Touchscreen' 'Coordinate Transformation Matrix' -1 0 1 0 1 0 0 0 1 // that works for me 0 -1 1 1 0 0 0 0 1 was originally.
+DISPLAY=:0.0 xinput --set-prop 'ADS7846 Touchscreen' 'Coordinate Transformation Matrix' -1 0 1 0 1 0 0 0 1 // that works for me. 0 -1 1 1 0 0 0 0 1 was originally.
 
 You can run code alone to find right confgi to you.
 

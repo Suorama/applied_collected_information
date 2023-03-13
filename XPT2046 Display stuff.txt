@@ -25,7 +25,7 @@ Mäybe Orange minimal armbian include more components with that that Raspbian De
 But all seems to work nicely.
 ____________________________________________________________________________
 
-ORange Pi (and others...) update later, proggress is happened. All works, only x-axix is inverted...
+ORange Pi (and others...)
 
 1.st
 I choose latest armbian (5.15.93-sunxi kernel).

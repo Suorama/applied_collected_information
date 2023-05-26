@@ -43,7 +43,7 @@ So, example that 10A bed shoud work easily. And 3.3A Nozzle cardridge more easil
 
 And I think, I can use couple parallel... perhaps...
 
-There is also example AOD4184 what looks at first very promising. 40V and 50A. But truth is different. That FET can handle 10A continously.
+There is also example AOD4184 what looks at first very promising. 40V and 50A. But truth is different. That FET can handle 10A continously (without cooling).
 
 So, it cost about 0.70€ to solve that problem. Well, I need some wires too.
 
@@ -67,3 +67,7 @@ What happens?
  - NozzleHeater MosFET allow power flow to the cardridge.
  - PSU voltage is stil 12.5V, MB got 12.4V, Hotbed got 12.1V and Nozzle cardridge got 12.2V
  - Because of losses, I adjust voltage to 12.5V. So every component got at least 12V. And 0.5V is not that much over.
+
+23.05.26
+ I order BTT Pi v1.2 boards (got it already) and later BTT TFT35 SPI V2.1
+ First impress, BTT Pi works nicely.

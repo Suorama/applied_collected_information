@@ -1,0 +1,32 @@
+I decide to make my own pinter...
+
+I make it's base at 20 x 20mm and 20 x 40mm alumium profile, what I collected as crap from other peoples. (base is complete)
+To core xy movements I use Layerfused desing, because it fits 20 x 20 profile. Otherwise printer differs "much". (Core xy is complete)
+I plan to use three Z axis with 8mm srewbars and linears. (linears, bars and motors on site, nuts is ordered)
+HotBed is 235 x 235mm from Creality. (on site)
+I plan to use BBT SKR Pro 1.2 motherboard with TMC2209 and DRV8825 drivers. (MB ordered drvers is on site)
+There is also BTT Pi v1.2 and BTT TFT3.5 V2.1 to the Klipper. (Pi is on site, tft is ordered)
+I plan to use Biqu Orbiter v2.0 and Micro Swiss fulmetal titan hotend. (Micro Swiss is on site, Orbiter is ordered)
+Fanless 24V 500W NiuGuy Leo power. (Power is on site)
+
+Costs...
+ - profiles, perhaps I add 50€ from those.
+ - Stepper motors is recycled, but perhaps 10€.
+ - Belt is recycled, 5€ (I have new one too..)
+ - Hotbed 19,68€
+ - Linears 14,27€ + 28,14€ + 10€ from recycled ones = 52.41€
+ - BTT SKR Pro 46.73$ = 43,85€
+ - BTT Pi 33,68$ = 31,60€
+ - BTT tft 19.68$ = 18,47€
+ - Biqu Orbiter 51.42$ = 48,23€
+ - BTT Anti backslash nuts 2,36$ = 2,21€
+ - BTT Chaft couplers 7,43$ = 6,97€
+ - Micro Swiss recycled, but nearly new, 10€
+ - T-slot L-shape 2020 3,84€
+ - Fystech bed isulator matt 1,18€
+ - TMC2209 x 5 32,59€
+ - Timing Pulleys x 10 8,64€
+ - Power 20,91€
+ And lots of stuff what I'm not become to use with that project... =D
+365,58€ to this. Well I collect lots of parts same time and get three working printers also...
+So perhaps I can left those recycled parts without price. But there those are anyway.
